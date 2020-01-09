@@ -50,6 +50,24 @@
 		box-sizing: border-box;
 	}
 
+/*回頂端*/
+	.toTop {
+		display: none;
+		position: fixed !important;
+		background: #ADADAD !important;
+		height: 50px !important;
+		width: 50px !important;
+		top: 80vh !important;
+		right: 2.5vw !important;
+		border-radius: 50% !important;
+		color: #fff !important;
+		text-align: center !important;
+		font-size: 30px !important;
+		padding: 10px 0 !important;
+		line-height: 1 !important;
+		cursor: pointer;
+	}
+
 /* Containers */
 
 	.container {
