@@ -4,6 +4,9 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+var t_img;
+var isLoad = true;
+
 (function($) {
 
     document.getElementById("content").style.display = "none";
@@ -115,11 +118,12 @@
                 usePopupNav: true,
                 windowMargin: (skel.breakpoint('small').active ? 0 : 50)
             });
+        });
 
+        isImgLoad(function() {
             document.getElementById("loader").style.display = "none";
             document.getElementById("content").style.display = "block";
         });
-
     });
 
 })(jQuery);
@@ -135,4 +139,22 @@ function backToTop() {
         }, "slow");
     }
     return false;
+}
+
+function isImgLoad(callback) {
+    $('.cover').each(function() {
+        if (this.height === 0) {
+            isLoad = false;
+            return false;
+        }
+    });
+    if (isLoad) {
+        clearTimeout(t_img);
+        callback();
+    } else {
+        isLoad = true;
+        t_img = setTimeout(function() {
+            isImgLoad(callback);
+        }, 500);
+    }
 }
