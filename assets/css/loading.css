@@ -1,9 +1,9 @@
 .spinner {
     margin: 100px auto;
-    width: 100px;
+    width: 32%;
     height: 80px;
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .spinner>div {
