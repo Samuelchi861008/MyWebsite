@@ -115,11 +115,11 @@
                 usePopupNav: true,
                 windowMargin: (skel.breakpoint('small').active ? 0 : 50)
             });
+
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("content").style.display = "block";
         });
     });
-
-    document.getElementById("loader").style.display = "none";
-    document.getElementById("content").style.display = "block";
 
 })(jQuery);
 
