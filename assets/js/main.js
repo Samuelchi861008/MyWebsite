@@ -6,8 +6,7 @@
 
 (function($) {
 
-    document.getElementById("content").style.display = "none";
-    document.getElementById("loader").style.display = "block";
+    hidePage();
 
     var settings = {
 
@@ -116,8 +115,7 @@
                 windowMargin: (skel.breakpoint('small').active ? 0 : 50)
             });
 
-            document.getElementById("loader").style.display = "none";
-            document.getElementById("content").style.display = "block";
+            showPage();
         });
     });
 
@@ -135,3 +133,15 @@ function backToTop() {
     }
     return false;
 }
+
+/* loader Start */
+function hidePage() {
+    document.getElementById("loader").style.display = "block";
+    document.getElementById("content").style.display = "none";
+}
+
+function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("content").style.display = "block";
+}
+/* loader End */
