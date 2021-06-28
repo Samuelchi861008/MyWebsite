@@ -2047,8 +2047,8 @@ input[type="radio"]+label:before {
 }
 
 .image.avatar img {
-    border-radius: 100%;
-    width: 120px;
+    border-radius: 40%;
+    width: 140px;
     height: 150px;
 }
 
